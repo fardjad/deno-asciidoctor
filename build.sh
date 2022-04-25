@@ -10,4 +10,6 @@ popd > /dev/null
 
 pushd mod > /dev/null
 deno cache --lock=lock.json --lock-write ./deps.ts
+cp ../README.md README.md
 popd > /dev/null
+
