@@ -1,7 +1,4 @@
-import {
-  assertExists,
-  assertMatch,
-} from "https://deno.land/std@0.136.0/testing/asserts.ts";
+import { assertExists, assertMatch } from "./deps.ts";
 
 import Asciidoctor from "./mod.ts";
 
