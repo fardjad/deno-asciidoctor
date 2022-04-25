@@ -51,7 +51,7 @@ jobs:
         if: github.ref == 'refs/heads/main'
         run: |
           version="$(cat VERSION)"
-          tag="v${version}"
+          tag="${version}"
 
           if git fetch origin tag "$tag" > /dev/null 2>&1; then
             echo "Tag already exists. Skipping..."
