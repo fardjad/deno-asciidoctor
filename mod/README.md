@@ -14,7 +14,7 @@ For more information about the module, please visit the Asciidoctor.js
 ## Usage
 
 ```typescript
-import Asciidoctor from 'https://deno.land/x/asciidoctor/mod.ts';
+import Asciidoctor from 'https://deno.land/x/asciidoctor/mod.js';
 
 const asciidoctor = Asciidoctor();
 const html = asciidoctor.convert("== TestTitle");

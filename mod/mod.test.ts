@@ -1,6 +1,6 @@
 import { assertExists, assertMatch } from "./deps.ts";
 
-import Asciidoctor from "./mod.ts";
+import Asciidoctor from "./mod.js";
 
 Deno.test("Default export", () => {
   assertExists(Asciidoctor);
