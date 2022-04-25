@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "strict": true
+  },
+  "lint": {
+    "files": {
+      "include": ["."],
+      "exclude": ["./asciidoctor.js", "./mod.d.ts"]
+    },
+    "rules": {
+      "tags": ["recommended"]
+    }
+  },
+  "fmt": {
+    "files": {
+      "include": ["."],
+      "exclude": ["./asciidoctor.js", "./mod.d.ts"]
+    }
+  }
+}
