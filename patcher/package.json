@@ -17,7 +17,7 @@
   "license": "MIT",
   "dependencies": {
     "@asciidoctor/core": "^2.2.6",
-    "acorn": "^8.7.0",
+    "acorn": "^8.7.1",
     "astring": "^1.8.1",
     "estree-walker": "^3.0.1"
   }
