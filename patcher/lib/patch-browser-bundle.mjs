@@ -2,6 +2,7 @@ import fs from "node:fs";
 import * as astring from "astring";
 import { parse } from "acorn";
 import { walk } from "estree-walker";
+
 import { readFileFromPackage } from "./read-file-from-package.mjs";
 
 const isThisDotOpalAssignment = (node) => {
@@ -62,7 +63,14 @@ walk(ast, {
   },
 });
 
-const code = `${astring.generate(ast)}
+const code = `class XMLHttpRequest {
+  constructor() {
+    throw new Error("Loading remote resources is not supported! If you're trying to load a stylesheet, consider setting the linkcss document attribute");
+  }
+}
+
+${astring.generate(ast)}
+
 const Asciidoctor = globalThis.Asciidoctor;
 delete globalThis.Asciidoctor;
 export default Asciidoctor;

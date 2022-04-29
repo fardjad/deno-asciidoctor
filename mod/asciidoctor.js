@@ -1,3 +1,9 @@
+class XMLHttpRequest {
+  constructor() {
+    throw new Error("Loading remote resources is not supported! If you're trying to load a stylesheet, consider setting the linkcss document attribute");
+  }
+}
+
 (function (undefined) {
   var global_object = this, console;
   if (typeof global !== 'undefined') {
@@ -39840,6 +39846,7 @@ Opal.modules["corelib/unsupported"] = function (Opal) {
   };
   return Opal.Asciidoctor;
 });
+
 
 const Asciidoctor = globalThis.Asciidoctor;
 delete globalThis.Asciidoctor;

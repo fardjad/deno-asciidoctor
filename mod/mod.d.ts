@@ -1,4 +1,4 @@
-import {Buffer} from 'https://deno.land/std/node/buffer.ts';
+import { Buffer } from "./deps.ts"
 // TypeScript Version: 3.7
 export namespace Asciidoctor {
   import Author = Document.Author;

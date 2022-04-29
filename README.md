@@ -17,6 +17,21 @@ For more information about the module, please visit the Asciidoctor.js
 import Asciidoctor from 'https://deno.land/x/asciidoctor/mod.js';
 
 const asciidoctor = Asciidoctor();
-const html = asciidoctor.convert("== TestTitle");
+const html = asciidoctor.convert(
+  [
+    ":linkcss:",
+    ":stylesheet: https://cdn.jsdelivr.net/gh/asciidoctor/asciidoctor/data/stylesheets/asciidoctor-default.css",
+    "== TestTitle",
+  ].join("\n"),
+  {
+    safe: "server",
+    doctype: "book",
+    standalone: true,
+  },
+) as string;
 console.log(html);
 ```
+
+## Limitations
+
+Fetching remote resources such as stylesheets is not supported! To load stylesheets, consider setting the linkcss document attribute or embed the stylesheets in the HTML manually.

@@ -11,3 +11,20 @@ Deno.test("Convert to HTML", () => {
   const html = asciidoctor.convert("== TestTitle") as string;
   assertMatch(html, /TestTitle/);
 });
+
+Deno.test("Stylesheet support", () => {
+  const asciidoctor = Asciidoctor();
+  const html = asciidoctor.convert(
+    [
+      ":linkcss:",
+      ":stylesheet: https://cdn.jsdelivr.net/gh/asciidoctor/asciidoctor/data/stylesheets/asciidoctor-default.css",
+      "== TestTitle",
+    ].join("\n"),
+    {
+      safe: "server",
+      doctype: "book",
+      standalone: true,
+    },
+  ) as string;
+  assertMatch(html, /stylesheet/);
+});
