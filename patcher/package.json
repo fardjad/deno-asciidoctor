@@ -18,7 +18,7 @@
   "dependencies": {
     "@asciidoctor/core": "^2.2.6",
     "acorn": "^8.8.1",
-    "astring": "^1.8.3",
+    "astring": "^1.8.4",
     "estree-walker": "^3.0.1"
   }
 }
